@@ -3,3 +3,4 @@
 Daily Solutions to Leetcode Toy Problems
 
 1. shortestWordDistance
+2. countingElements
