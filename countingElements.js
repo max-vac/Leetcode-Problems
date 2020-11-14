@@ -1,4 +1,5 @@
 // 1426. Counting Elements
+//11/14/2020
 
 // Given an integer array arr, count how many elements x there are, such that x + 1 is also in arr.
 
@@ -35,5 +36,21 @@
 // Explanation: Both 1s are counted because 2 is in the array.
 
 var countElements = function(arr) {
+  let counter = 0;
+  let results = {};
 
+  for (let i = 0; i < arr.length; i++) {
+    !results[arr[i]] ? results[arr[i]] = 1 : results[arr[i]]++;
+  }
+
+  for (let key in results) {
+    if (results.hasOwnProperty(+(key) + 1)) {
+      counter += results[key];
+    }
+  }
+  return counter;
 };
+
+// Success
+// Runtime: 72 ms, faster than 89.71% of JavaScript online submissions for Counting Elements.
+// Memory Usage: 38.7 MB, less than 45.59% of JavaScript online submissions for Counting Elements.
