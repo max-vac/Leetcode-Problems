@@ -1,4 +1,5 @@
 //243. Shortest Word Distance
+//11/13/2020
 // Given a list of words and two words word1 and word2, return the shortest distance between these two words in the list.
 
 // Example:
@@ -10,11 +11,23 @@
 // Output: 1
 
 var shortestDistance = function(words, word1, word2) {
-  //create result value = Infinity;
-  //iterate through words array
-    //if value is equal to word1
-      //iterate through words array
-        //if value is equal to word2
-          //if absolute of i - j < result
-            //set result value
-  //return result;
+  let result = Infinity;
+
+  for (let i = 0; i < words.length; i++) {
+    if (words[i] === word1) {
+      for (let j = 0; j < words.length; j++) {
+        if (words[j] === word2) {
+          let num = Math.abs(i - j);
+          if (num < result) {
+            result = num;
+          }
+        }
+      }
+    }
+  }
+  return result;
+};
+
+//Success
+// Runtime: 80 ms, faster than 73.37% of JavaScript online submissions for Shortest Word Distance.
+// Memory Usage: 39.6 MB, less than 77.51% of JavaScript online submissions for Shortest Word Distance.
