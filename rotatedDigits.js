@@ -12,5 +12,24 @@
 // Note that 1 and 10 are not good numbers, since they remain unchanged after rotating.
 
 var rotatedDigits = function(N) {
+  //create counter variable set to 0
+  //create obj with keys set to numbers that rotate and their value
 
+  //create function that takes in the N as an argurment
+    //create result var set to empty array
+    //if n === 1
+      //return
+
+    //split n into an array
+    //iterate over array
+      //if value is propert in obj
+        //push property value aka the reversed value to the array
+
+      //if array joined is not equal to N
+        //increment counter
+
+    //call function with n -1
+
+  //invoke function with n - 1
+  //return counter
 };
