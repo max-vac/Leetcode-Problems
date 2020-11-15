@@ -40,9 +40,10 @@ var countElements = function(arr) {
   let results = {};
 
   for (let i = 0; i < arr.length; i++) {
-    !results[arr[i]] ? results[arr[i]] = 1 : results[arr[i]]++;
+    // !results[arr[i]] ? results[arr[i]] = 1 : results[arr[i]]++;
+    results[arr[i]] = 1
   }
-
+console.log(results);
   for (let key in results) {
     if (results.hasOwnProperty(+(key) + 1)) {
       counter += results[key];
@@ -51,6 +52,8 @@ var countElements = function(arr) {
   return counter;
 };
 
+countElements([1, 1, 2, 3])
 // Success
 // Runtime: 72 ms, faster than 89.71% of JavaScript online submissions for Counting Elements.
 // Memory Usage: 38.7 MB, less than 45.59% of JavaScript online submissions for Counting Elements.
+
