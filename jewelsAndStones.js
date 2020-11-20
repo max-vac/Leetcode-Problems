@@ -18,10 +18,8 @@ var numJewelsInStones = function(J, S) {
   let counter = 0;
 
   for (const stone of S) {
-    for (const jewel of J) {
-      if (stone === jewel) {
-        counter++;
-      }
+    if (J.indexOf(stone) >= 0) {
+      counter++;
     }
   }
   return counter;
@@ -29,5 +27,5 @@ var numJewelsInStones = function(J, S) {
 
 // Success
 // Details
-// Runtime: 88 ms, faster than 39.17% of JavaScript online submissions for Jewels and Stones.
-// Memory Usage: 40.9 MB, less than 8.27% of JavaScript online submissions for Jewels and Stones.
+// Runtime: 92 ms, faster than 24.10% of JavaScript online submissions for Jewels and Stones.
+// Memory Usage: 39 MB, less than 53.16% of JavaScript online submissions for Jewels and Stones.
