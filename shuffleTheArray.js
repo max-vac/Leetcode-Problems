@@ -20,3 +20,13 @@
 
 // Input: nums = [1,1,2,2], n = 2
 // Output: [1,2,1,2]
+
+var shuffle = function(nums, n) {
+  //create result variable set to an empty array
+
+  //iterate over array to the length of n
+    //push the value to the result variable
+    //push the value plus n to the result variable
+
+  //return result
+};
