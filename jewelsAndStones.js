@@ -15,17 +15,13 @@
 // Output: 0
 
 var numJewelsInStones = function(J, S) {
-  let obj = {};
   let counter = 0;
 
-  for (const jewel of J) {
-    console.log(jewel)
-    obj[jewel] = jewel;
-  }
-
   for (const stone of S) {
-    if (obj.hasOwnProperty(stone)) {
-      counter++;
+    for (const jewel of J) {
+      if (stone === jewel) {
+        counter++;
+      }
     }
   }
   return counter;
@@ -33,5 +29,5 @@ var numJewelsInStones = function(J, S) {
 
 // Success
 // Details
-// Runtime: 112 ms, faster than 5.29% of JavaScript online submissions for Jewels and Stones.
-// Memory Usage: 42.2 MB, less than 5.67% of JavaScript online submissions for Jewels and Stones.
+// Runtime: 88 ms, faster than 39.17% of JavaScript online submissions for Jewels and Stones.
+// Memory Usage: 40.9 MB, less than 8.27% of JavaScript online submissions for Jewels and Stones.
