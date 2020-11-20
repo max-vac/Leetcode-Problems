@@ -22,11 +22,15 @@
 // Output: [1,2,1,2]
 
 var shuffle = function(nums, n) {
-  //create result variable set to an empty array
+  let result = [];
 
-  //iterate over array to the length of n
-    //push the value to the result variable
-    //push the value plus n to the result variable
-
-  //return result
+  for (let i = 0; i < n; i++) {
+    result.push.apply(result, [nums[i], nums[i + n]])
+  }
+  return result;
 };
+
+// Success
+// Details
+// Runtime: 76 ms, faster than 98.14% of JavaScript online submissions for Shuffle the Array.
+// Memory Usage: 40.5 MB, less than 43.62% of JavaScript online submissions for Shuffle the Array.
