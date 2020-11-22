@@ -41,5 +41,10 @@
 // Output: [1]
 
 var createTargetArray = function(nums, index) {
+  //create result varibale set to an empty array
 
+  //iterate over the index array
+    //add value of nums to result using splice first arg wil be value of index and second value of nums
+
+  //return result variable
 };
