@@ -12,5 +12,20 @@
 // Explanation: Only 1 and 5 appeared in the three arrays.
 
 var arraysIntersection = function(arr1, arr2, arr3) {
+  //create a results var set to an empty array
+  //create a obj variable set to an empty object
+
+  //iterate over the arrays at arr1.length as the comparison
+    //if value at arr1 or arr2 or arr3
+      //set obj at the value to 1
+    //else
+      //increment the value in the obj
+
+  //iterate over the obj variable
+    //if the value is equal to three
+      //push the value into the result variable
+
+  //return the result variable
 
 };
+
