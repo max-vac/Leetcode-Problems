@@ -41,10 +41,15 @@
 // Output: [1]
 
 var createTargetArray = function(nums, index) {
-  //create result varibale set to an empty array
+  let result = [];
 
-  //iterate over the index array
-    //add value of nums to result using splice first arg wil be value of index and second value of nums
+  for (let i = 0; i < nums.length; i++) {
+    result.splice(index[i], 0, nums[i]);
+  }
 
-  //return result variable
+  return result;
 };
+
+// Success
+// Runtime: 76 ms, faster than 76.93% of JavaScript online submissions for Create Target Array in the Given Order.
+// Memory Usage: 38.9 MB, less than 24.71% of JavaScript online submissions for Create Target Array in the Given Order.
