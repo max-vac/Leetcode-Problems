@@ -1,5 +1,5 @@
 // 3. Longest Substring Without Repeating Characters
-// 11/19/2020
+// 11/20/2020
 
 // Given a string s, find the length of the longest substring without repeating characters.
 
@@ -27,21 +27,24 @@
 // Output: 0
 
 var lengthOfLongestSubstring = function(s) {
-  //create a start varaible set to 0
-  //create longest variable set to 0
-  //create obj varaible set to an empty {}
+  let start = 0;
+  let longest = 0;
+  let obj = {};
 
-  //iterate over s
-    //if value not in object
-      //set value key to 0
+  for (let i = 0; i < s.length; i++) {
+    if (!obj[s[i]]) {
+      obj[s[i]] = 0;
+    }
 
-    //increment the property at that value
+    obj[s[i]]++;
 
-    //if the values of the obj are greater than 1
-      //decrement the value at start by 1
-      //increment start
+    if (Object.values(obj).includes(2)) {
+      obj[s[start]]--;
+      start++;
+    }
 
-    //longest wil be the result of math max between longest and i - start + 1 for initial start
+    longest = Math.max(longest, (i - start) + 1)
+  }
 
-  //return longest
+  return longest;
 };
