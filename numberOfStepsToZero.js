@@ -32,5 +32,18 @@
 // Step 4) 1 is odd; subtract 1 and obtain 0.
 
 var numberOfSteps  = function(num) {
+  //create counter variable set to zero
 
+  //create math function with num as argument
+    //if num is equal to 0
+      //return
+    //if num is odd
+      //increment counter
+      //call function with num - 1 as arg
+    //else if num is even
+      //increment counter
+      //call function with num / 2
+
+  //invoke math function
+  //return counter
 };
