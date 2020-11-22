@@ -1,13 +1,6 @@
-// 1342. Number of Steps to Reduce a Number to Zero
-// Easy
+//1342. Number of Steps to Reduce a Number to Zero
+//11/22/2020
 
-// 589
-
-// 62
-
-// Add to List
-
-// Share
 // Given a non-negative integer num, return the number of steps to reduce it to zero. If the current number is even, you have to divide it by 2, otherwise, you have to subtract 1 from it.
 
 // Example 1:
@@ -32,18 +25,26 @@
 // Step 4) 1 is odd; subtract 1 and obtain 0.
 
 var numberOfSteps  = function(num) {
-  //create counter variable set to zero
+  let counter = 0;
 
-  //create math function with num as argument
-    //if num is equal to 0
-      //return
-    //if num is odd
-      //increment counter
-      //call function with num - 1 as arg
-    //else if num is even
-      //increment counter
-      //call function with num / 2
+  let math = (num) => {
+    if (num === 0) {
+      return;
+    }
 
-  //invoke math function
-  //return counter
+    if (num % 2 === 1) {
+      counter++;
+      math(num - 1);
+    } else {
+      counter++;
+      math(num / 2);
+    }
+  };
+
+  math(num);
+  return counter;
 };
+
+// Success
+// Runtime: 80 ms, faster than 66.96% of JavaScript online submissions for Number of Steps to Reduce a Number to Zero.
+// Memory Usage: 38.4 MB, less than 80.00% of JavaScript online submissions for Number of Steps to Reduce a Number to Zero.
