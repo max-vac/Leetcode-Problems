@@ -15,13 +15,17 @@
 // Output: "255[.]100[.]50[.]0"
 
 var defangIPaddr = function(address) {
-    //create result variable set to an empty string
+    let result = '';
 
-    //iterate through the address
-      //check to see if the value is equal to a period
-        //result plus a [ then the value then a ]
-      //else
-        //add the value
+    for (let i = 0; i < address.length; i++) {
+      address[i] === '.' ?
+        result += '[' + address[i] + ']' :
+        result += address[i];
+    }
 
-    //return the result variable
+    return result;
 };
+
+// Success
+// Runtime: 68 ms, faster than 96.74% of JavaScript online submissions for Defanging an IP Address.
+// Memory Usage: 38.3 MB, less than 68.22% of JavaScript online submissions for Defanging an IP Address.
