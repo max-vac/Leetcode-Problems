@@ -24,15 +24,20 @@
 // If we add all these together we get 1 + 4 + 2 + 5 + 3 + 7 + 11 + 10 + 15 = 58
 
 var sumOddLengthSubarrays = function(arr) {
-  //create result variable set to 0
+  let result = 0;
 
-  //iterate over the arr
-
-    //iterate over the arr
-      //if i - j is even
-        //add to result the return of arr sliced at i to j + 1
-          //reduce that with the initialization of 0
-
-  //return result
-
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr.length; j++) {
+      if ((j - i) % 2 === 0) {
+        result += arr.slice(i, j + 1).reduce((acc, val) => {
+          return acc += val;
+        }, 0)
+      }
+    }
+  }
+  return result;
 };
+
+// Success
+// Runtime: 84 ms, faster than 55.82% of JavaScript online submissions for Sum of All Odd Length Subarrays.
+// Memory Usage: 44.2 MB, less than 19.40% of JavaScript online submissions for Sum of All Odd Length Subarrays.
