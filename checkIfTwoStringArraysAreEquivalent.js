@@ -25,14 +25,19 @@
 // Output: true
 
 var arrayStringsAreEqual = function(word1, word2) {
-  //create concated word variable set to an empty string
-  //create concated word variable set to an empty string
+  let concatWord1 = '';
+  let concatWord2 = '';
 
-  //iterate through word1
-    //add iteration to first concatted word
+  for (let word of word1) {
+    concatWord1 += word;
+  }
 
-  //iterate though word2
-    //add iteration to second concatted word
+  for (let word of word2) {
+    concatWord2 += word;
+  }
 
-  //return result of concated word 1 to word 2
+  return concatWord1 === concatWord2;
 };
+
+// Runtime: 76 ms, faster than 79.92% of JavaScript online submissions for Check If Two String Arrays are Equivalent.
+// Memory Usage: 38.9 MB, less than 22.35% of JavaScript online submissions for Check If Two String Arrays are Equivalent.
