@@ -25,6 +25,13 @@
 // Output: true
 
 var arrayStringsAreEqual = function(word1, word2) {
+  return word1.reduce((acc, val) => acc += val) === word2.reduce((acc, val) => acc +=val);
+}
+
+// Runtime: 72 ms, faster than 90.53% of JavaScript online submissions for Check If Two String Arrays are Equivalent.
+// Memory Usage: 38.5 MB, less than 81.82% of JavaScript online submissions for Check If Two String Arrays are Equivalent.
+
+var arrayStringsAreEqual = function(word1, word2) {
   let concatWord1 = '';
   let concatWord2 = '';
 
