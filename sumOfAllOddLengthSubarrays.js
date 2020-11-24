@@ -24,6 +24,15 @@
 // If we add all these together we get 1 + 4 + 2 + 5 + 3 + 7 + 11 + 10 + 15 = 58
 
 var sumOddLengthSubarrays = function(arr) {
+  //create result variable set to 0
 
+  //iterate over the arr
+
+    //iterate over the arr
+      //if i - j is even
+        //add to result the return of arr sliced at i to j + 1
+          //reduce that with the initialization of 0
+
+  //return result
 
 };
