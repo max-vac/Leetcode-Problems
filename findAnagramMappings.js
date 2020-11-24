@@ -15,5 +15,10 @@
 // [1, 4, 3, 2, 0]
 
 var anagramMappings = function(A, B) {
+  //create result variable set to an empty array
 
+  //iterate through array A
+    //push the return of indexOf array B
+
+  //return result
 };
