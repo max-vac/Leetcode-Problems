@@ -15,10 +15,15 @@
 // [1, 4, 3, 2, 0]
 
 var anagramMappings = function(A, B) {
-  //create result variable set to an empty array
+  let result = [];
 
-  //iterate through array A
-    //push the return of indexOf array B
+  for (let num of A) {
+      result.push(B.indexOf(num))
+  }
 
-  //return result
+  return result;
 };
+
+// Success
+// Runtime: 80 ms, faster than 49.61% of JavaScript online submissions for Find Anagram Mappings.
+// Memory Usage: 38.8 MB, less than 27.91% of JavaScript online submissions for Find Anagram Mappings.

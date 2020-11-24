@@ -44,5 +44,6 @@ ParkingSystem.prototype.addCar = function(carType) {
   }
 };
 
+//Success
 // Runtime: 148 ms, faster than 75.57% of JavaScript online submissions for Design Parking System.
 // Memory Usage: 45.9 MB, less than 81.76% of JavaScript online submissions for Design Parking System.
