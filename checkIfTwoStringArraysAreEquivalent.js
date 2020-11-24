@@ -25,5 +25,14 @@
 // Output: true
 
 var arrayStringsAreEqual = function(word1, word2) {
+  //create concated word variable set to an empty string
+  //create concated word variable set to an empty string
 
+  //iterate through word1
+    //add iteration to first concatted word
+
+  //iterate though word2
+    //add iteration to second concatted word
+
+  //return result of concated word 1 to word 2
 };
