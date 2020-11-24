@@ -25,30 +25,24 @@
 // parkingSystem.addCar(1); // return false because there is no available slot for a big car. It is already occupied.
 
 var ParkingSystem = function(big, medium, small) {
-  //create prop for big spots
-  //create prop for medium spots
-  //create prop for small spots
+  this.bigSpots = big;
+  this.mediumSpots = medium;
+  this.smallSpots = small;
 };
 
 ParkingSystem.prototype.addCar = function(carType) {
-  //if cartype is equal to 1
-    //if this.bigSpots is greater than 0
-      //decrement this.bigSPots
-      //return true
-    //else
-      //retrun false
+  if (carType === 1) {
+    return this.bigSpots-- > 0;
+  }
 
-  //if cartype is equal to 1
-    //if this.mediumSpots is greater than 0
-      //decrement this.mediumSpots
-      //return true
-    //else
-      //retrun false
+  if (carType === 2) {
+    return this.mediumSpots-- > 0;
+  }
 
-  //if cartype is equal to 1
-    //if this.smallSpots is greater than 0
-      //decrement this.smallSpots
-      //return true
-    //else
-      //retrun false
+  if (carType === 3) {
+    return this.smallSpots-- > 0;
+  }
 };
+
+// Runtime: 148 ms, faster than 75.57% of JavaScript online submissions for Design Parking System.
+// Memory Usage: 45.9 MB, less than 81.76% of JavaScript online submissions for Design Parking System.
