@@ -35,5 +35,16 @@
 // Output: 0
 
 var maxDepth = function(s) {
+  //create maxDepth variable set to 0
+  //counter set to 0
 
+  //iterate over the string s
+    //if val is equal to'('
+      //counter ++
+    //else if val is equal to ')'
+      //counter--
+
+  //maxdepth is equal to max of itself and counter
+
+  //return maxDepth
 };
