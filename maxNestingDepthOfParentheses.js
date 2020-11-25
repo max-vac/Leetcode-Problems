@@ -35,16 +35,21 @@
 // Output: 0
 
 var maxDepth = function(s) {
-  //create maxDepth variable set to 0
-  //counter set to 0
+  let counter = 0;
+  let maxDepthVal = 0;
 
-  //iterate over the string s
-    //if val is equal to'('
-      //counter ++
-    //else if val is equal to ')'
-      //counter--
+  for (let i = 0; i < s.length; i++) {
+    if (s[i] === '(') {
+      counter++;
+    } else if (s[i] === ')') {
+      counter--;
+    }
+    maxDepthVal = Math.max(maxDepthVal, counter);
+  }
 
-  //maxdepth is equal to max of itself and counter
-
-  //return maxDepth
+  return maxDepthVal;
 };
+
+// Success
+// Runtime: 76 ms, faster than 87.29% of JavaScript online submissions for Maximum Nesting Depth of the Parentheses.
+// Memory Usage: 38.5 MB, less than 74.23% of JavaScript online submissions for Maximum Nesting Depth of the Parentheses.
