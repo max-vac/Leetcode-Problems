@@ -19,13 +19,21 @@
 // Input: nums = [1,1,2,3]
 // Output: [1,3,3]
 
-var decompressRLElist = function(nums) {
-    //create result variable set to an empty array
+var decompressRLElist = function (nums) {
+  let result = [];
 
-    //iterate over the nums array increment by 2
-      //create numOfTimes variable set to the val
-      //while numOfTimes is greater than 0
-        //push the val in the result
-        //decrement numOfTimes variable
-    //return result;
+  for (let i = 0; i < nums.length; i += 2) {
+    let numOfTimes = nums[i];
+    while (numOfTimes > 0) {
+      result.push(nums[i + 1]);
+
+      numOfTimes--;
+    }
+  }
+
+  return result;
 };
+
+// Success
+// Runtime: 92 ms, faster than 90.01% of JavaScript online submissions for Decompress Run-Length Encoded List.
+// Memory Usage: 42.5 MB, less than 47.83% of JavaScript online submissions for Decompress Run-Length Encoded List.
