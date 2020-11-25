@@ -17,14 +17,18 @@
 // Kid 5 has 3 candies and if he or she receives at least 2 extra candies will have the greatest number of candies among the kids.
 
 var kidsWithCandies = function(candies, extraCandies) {
-  //create results variable set to an empty array
-  //find the Max value of the given array and set that to a variable mostCandies
+  let mostCandies = Math.max(...candies);
+  let result = [];
 
-  //iterate over the candies array
-    //if the value plus the extraCandies is greater than or equal to most Candies
-      //push true to result array
-    //else
-      //push false to result array
+  for (let candy of candies) {
+    candy + extraCandies >= mostCandies ?
+      result.push(true) :
+      result.push(false);
+  }
 
-  //return result variable
+  return result;
 };
+
+// Success
+// Runtime: 72 ms, faster than 95.86% of JavaScript online submissions for Kids With the Greatest Number of Candies.
+// Memory Usage: 39.1 MB, less than 14.96% of JavaScript online submissions for Kids With the Greatest Number of Candies.
