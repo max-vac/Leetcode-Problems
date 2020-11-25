@@ -20,20 +20,30 @@
 // Output: [[1,100],[7,100]]
 
 var highFive = function(items) {
-    //create a obj variable set to an empty {}
-    //create empty result variable set to an empty []
+  let obj = {};
+  let result = [];
+  items = items.sort((a, b) => {
+   return b[1] - a[1];
+  })
 
-    //iterate over the items array
-      //if obj has no prop of val at i[0]
-        //create an obj with score property i[1]
-          //create  num prop set it to 1
-      //else
-        //increment score
-        //increment num++;
+  for (let item of items) {
+    if (!obj[item[0]]) {
+      obj[item[0]] = {
+        score: item[1],
+        num: 1
+      };
+    } else if (obj[item[0]].num < 5) {
+      obj[item[0]].score += item[1];
+      obj[item[0]].num++;
+    }
+  }
 
-    //iterate over obj
-      //push results of the key and the score/num
-
-    //return result
-
+ for (let item in obj) {
+   result.push([item, Math.floor(obj[item].score / obj[item].num)]);
+ }
+ return result;
 };
+
+// Success
+// Runtime: 84 ms, faster than 85.71% of JavaScript online submissions for High Five.
+// Memory Usage: 40.9 MB, less than 78.57% of JavaScript online submissions for High Five.
