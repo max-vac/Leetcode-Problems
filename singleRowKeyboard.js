@@ -21,5 +21,15 @@
 // Output: 73
 
 var calculateTime = function(keyboard, word) {
+  //create count variable set to 0
+  //create obj set an empty object
+  //set pointer to 0
 
+  //iterate over keybaord
+    //set key to index
+
+  //iterate over word
+    //counter absolute value of obj key val minus pointer
+    //set pointer to the key value
+  //retrun result
 };
