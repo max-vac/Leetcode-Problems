@@ -26,18 +26,29 @@
 // Output: 9999
 // Explanation: It is better not to apply any change.
 
-var maximum69Number  = function(num) {
-  //input: number
-  //output: number
+let maximum69Number = (num) => {
+  let maximum = num;
+  let numStr = num.toString();
+  let pointer = 1;
+  let values = {
+    4: 3000,
+    3: 300,
+    2: 30,
+    1: 3
+  }
 
-  //create a maximum variable set to -Infinity
-  //create numStr variable set to num to String
-  //create a values variable set to keys of 0, 1, 2, 3 set to 3000, 300, 30, 3
-
-  //iterate over the numStr variable
-    //if the value is equal to '9'
-      //set maximum to math max of maximum and num minus the values at i
-    //else maximum to math.max of maximum and num plus values at i
-
-  //return maximum
+  for (let i = numStr.length - 1; i >= 0; i--) {
+    if (numStr[i] === '9') {
+      maximum = Math.max(maximum, (num - values[pointer]))
+    } else {
+      maximum = Math.max(maximum, (num + values[pointer]))
+    }
+    pointer++;
+  }
+  return maximum;
 };
+
+// Success
+// Runtime: 76 ms, faster than 83.02% of JavaScript online submissions for Maximum 69 Number.
+// Memory Usage: 38.4 MB, less than 92.83% of JavaScript online submissions for Maximum 69 Number.
+
