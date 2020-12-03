@@ -27,5 +27,17 @@
 // Explanation: It is better not to apply any change.
 
 var maximum69Number  = function(num) {
+  //input: number
+  //output: number
 
+  //create a maximum variable set to -Infinity
+  //create numStr variable set to num to String
+  //create a values variable set to keys of 0, 1, 2, 3 set to 3000, 300, 30, 3
+
+  //iterate over the numStr variable
+    //if the value is equal to '9'
+      //set maximum to math max of maximum and num minus the values at i
+    //else maximum to math.max of maximum and num plus values at i
+
+  //return maximum
 };
