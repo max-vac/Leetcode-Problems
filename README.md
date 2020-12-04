@@ -7,6 +7,7 @@ Daily Solutions to Leetcode Toy Problems
 #760. Find Anagram Mappings
 #771. Jewels and Stones
 #788. Rotated Digits
+#1085. Sum of Digits in the Minimum Number
 #1086. High Five
 #1108. Defanging an IP Address
 #1165. Single-Row Keyboard
