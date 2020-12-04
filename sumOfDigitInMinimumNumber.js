@@ -19,5 +19,22 @@
 // The minimal element is 33, and the sum of those digits is S = 3 + 3 = 6 which is even, so the answer is 1.
 
 var sumOfDigits = function(A) {
+  //input: array of positive numbers
+  //number deteremined by odd or even
+
+
+  //create minumum varibale set to 0
+
+  //create sum variable
+
+  //iterate over A
+    //set minimum to math min to between current minimum and the current array value
+
+  //set minimum to strginfied version then split
+
+  //iterate over minimum
+    //add each value to sum
+
+  //return whether odd or even true/false
 
 };
