@@ -40,16 +40,18 @@ var countLetters = function(S) {
 // Memory Usage: 39.3 MB, less than 33.73% of JavaScript online submissions for Count Substrings with Only One Distinct Letter.
 
 var countLetters = function(S) {
-  //create result varaible set to 0
-  //create counter variable set to 1;
+  let result = 1;
+  let counter = 1;
 
-  //iterate through the S starting at 1
-    //if value at S is equal to previous index value
-      //increment counter
-    //else
-      //set counter to 1
+  for (let i = 1; i < S.length; i++) {
+    S[i] === S[i - 1] ? counter++ : counter = 1;
 
-    //add current value of counter to result
+    result += counter;
+  }
 
-  //return result
+  return result;
 };
+
+// Success
+// Runtime: 76 ms, faster than 81.93% of JavaScript online submissions for Count Substrings with Only One Distinct Letter.
+// Memory Usage: 38.2 MB, less than 91.57% of JavaScript online submissions for Count Substrings with Only One Distinct Letter.
