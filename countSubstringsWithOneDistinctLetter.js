@@ -19,5 +19,22 @@
 // Output: 55
 
 var countLetters = function(S) {
+  let counter = 0;
+  let j = 0;
 
+  for (let i = 0; i < S.length; i++) {
+
+    while (S[i] === S[j]) {
+      counter++;
+      j++;
+    }
+
+    j = i + 1;
+  }
+
+  return counter;
 };
+
+// Success
+// Runtime: 88 ms, faster than 26.51% of JavaScript online submissions for Count Substrings with Only One Distinct Letter.
+// Memory Usage: 39.3 MB, less than 33.73% of JavaScript online submissions for Count Substrings with Only One Distinct Letter.
