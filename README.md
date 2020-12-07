@@ -7,9 +7,11 @@ Daily Solutions to Leetcode Toy Problems
 #760. Find Anagram Mappings
 #771. Jewels and Stones
 #788. Rotated Digits
+#961. N-Repeated Element in Size 2N Array
 #1085. Sum of Digits in the Minimum Number
 #1086. High Five
 #1108. Defanging an IP Address
+#1180. Count Substrings with Only One Distinct Letter
 #1165. Single-Row Keyboard
 #1213. Intersection of Three Sorted Arrays
 #1313. Decompress Run-Length Encoded List
