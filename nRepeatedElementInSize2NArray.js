@@ -19,12 +19,17 @@
 // Output: 5
 
 var repeatedNTimes = function(A) {
-  //create result var set empty obj
+  let obj= {};
 
-  //iterate over arr
-    //if not in the obj set val to 1 or increment
+  for (key of A) {
+    !obj[key] ? obj[key] = 1 : obj[key]++;
 
-    //if value in obj is equal to half the length of the array
-      //return the key
-
+    if (obj[key] === A.length / 2) {
+      return key;
+    }
+  }
 };
+
+// Success
+// Runtime: 100 ms, faster than 43.00% of JavaScript online submissions for N-Repeated Element in Size 2N Array.
+// Memory Usage: 44.7 MB, less than 23.10% of JavaScript online submissions for N-Repeated Element in Size 2N Array.
