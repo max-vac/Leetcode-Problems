@@ -33,3 +33,19 @@ var repeatedNTimes = function(A) {
 // Success
 // Runtime: 100 ms, faster than 43.00% of JavaScript online submissions for N-Repeated Element in Size 2N Array.
 // Memory Usage: 44.7 MB, less than 23.10% of JavaScript online submissions for N-Repeated Element in Size 2N Array.
+
+var repeatedNTimes = function(A) {
+  let obj = {};
+
+  for (let key of A) {
+      if (!obj[key]) {
+          obj[key] = 1;
+      } else {
+          return key
+      }
+  }
+};
+
+// Success
+// Runtime: 76 ms, faster than 96.56% of JavaScript online submissions for N-Repeated Element in Size 2N Array.
+// Memory Usage: 42.2 MB, less than 53.56% of JavaScript online submissions for N-Repeated Element in Size 2N Array.
