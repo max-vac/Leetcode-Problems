@@ -30,6 +30,6 @@ var uniqueOccurrences = function(arr) {
   return values.length === setValues.size;
 };
 
-Success
-Runtime: 84 ms, faster than 35.43% of JavaScript online submissions for Unique Number of Occurrences.
-Memory Usage: 39 MB, less than 55.78% of JavaScript online submissions for Unique Number of Occurrences.
+// Success
+// Runtime: 84 ms, faster than 35.43% of JavaScript online submissions for Unique Number of Occurrences.
+// Memory Usage: 39 MB, less than 55.78% of JavaScript online submissions for Unique Number of Occurrences.
