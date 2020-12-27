@@ -7,6 +7,7 @@ Daily Solutions to Leetcode Toy Problems
 #760. Find Anagram Mappings
 #771. Jewels and Stones
 #788. Rotated Digits
+#806. Number of Lines To Write String
 #961. N-Repeated Element in Size 2N Array
 #1085. Sum of Digits in the Minimum Number
 #1086. High Five
