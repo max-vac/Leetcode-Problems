@@ -29,16 +29,22 @@
 // There are a total of 2 lines, and the last line is 4 pixels wide.
 
 var numberOfLines = function(widths, S) {
-  //create counter variable set to 0
-  //set letterCount variable to 0
+  let lineCounter = 1;
+  let letterCount = 0;
 
-  //iterate over the given string
-    //letterCount += S at given index (charcode - 96)
+  for (let i =  0; i < S.length; i++) {
+    letterCount += widths[S.charCodeAt(i) - 97];
 
-    //if letterCount > 100
-      //increment counter
-      //letterCount = current value at S[i]
+    if (letterCount > 100) {
+      lineCounter++;
+      letterCount = widths[S.charCodeAt(i) - 97];
+    }
+  }
 
-
-  //return lineCounter
+  return [lineCounter, letterCount];
 };
+
+// Success
+// Details
+// Runtime: 80 ms, faster than 70.51% of JavaScript online submissions for Number of Lines To Write String.
+// Memory Usage: 38.3 MB, less than 87.18% of JavaScript online submissions for Number of Lines To Write String.
