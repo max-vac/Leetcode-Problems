@@ -29,5 +29,16 @@
 // There are a total of 2 lines, and the last line is 4 pixels wide.
 
 var numberOfLines = function(widths, S) {
+  //create counter variable set to 0
+  //set letterCount variable to 0
 
+  //iterate over the given string
+    //letterCount += S at given index (charcode - 96)
+
+    //if letterCount > 100
+      //increment counter
+      //letterCount = current value at S[i]
+
+
+  //return lineCounter
 };
