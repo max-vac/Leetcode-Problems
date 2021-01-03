@@ -22,6 +22,15 @@
 // There is no such i that A[i] = i, thus the output is -1.
 
 var fixedPoint = function(A) {
-
-
+  for (let i = 0; i < A.length; i++) {
+    if (A[i] === i) {
+      return i;
+    }
+  }
+  return -1;
 };
+
+// Success
+// Details
+// Runtime: 76 ms, faster than 84.44% of JavaScript online submissions for Fixed Point.
+// Memory Usage: 38.6 MB, less than 93.33% of JavaScript online submissions for Fixed Point.
