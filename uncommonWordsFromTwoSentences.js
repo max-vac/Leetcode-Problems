@@ -18,15 +18,25 @@ Input: A = "apple apple", B = "banana"
 Output: ["banana"]
 
 var uncommonFromSentences = function(A, B) {
-  //create wordsObj variable set to an empty array
-  //create wordsResult variable set to an empty array
+  let wordsObj = {};
+  let wordsResults = [];
+  let fullList = A.split(' ').concat(B.split(' '));
 
-  //create fullList set to the split of A concatted with the split of B
+  for (let word of fullList) {
+    !wordsObj[word] ?
+      wordsObj[word] = 1 :
+      wordsObj[word]++;
+  };
 
-  //iterate over the fullList
-    //if not in wordsObj then set the value to 1 otherwise increment it by 1
-
-  //iterate over the wordsResults
-    //if value is equal to 1
-      //push that value to the wordsResult array
+  for (let word in wordsObj) {
+    if (wordsObj[word] === 1) {
+      wordsResults.push(word);
+    }
+  };
+  return wordsResults;
 };
+
+// Success
+// Details
+// Runtime: 80 ms, faster than 60.39% of JavaScript online submissions for Uncommon Words from Two Sentences.
+// Memory Usage: 39.2 MB, less than 24.15% of JavaScript online submissions for Uncommon Words from Two Sentences.
