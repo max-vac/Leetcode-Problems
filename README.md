@@ -14,6 +14,7 @@ Daily Solutions to Leetcode Toy Problems
 #824. Goat Latin
 #884. Uncommon Words from Two Sentences
 #961. N-Repeated Element in Size 2N Array
+#1064. Fixed Point
 #1085. Sum of Digits in the Minimum Number
 #1086. High Five
 #1108. Defanging an IP Address
