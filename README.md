@@ -21,6 +21,7 @@ Daily Solutions to Leetcode Toy Problems
 #1108. Defanging an IP Address
 #1180. Count Substrings with Only One Distinct Letter
 #1165. Single-Row Keyboard
+#1185. Day of the Week
 #1207. Unique Number of Occurrences
 #1213. Intersection of Three Sorted Arrays
 #1313. Decompress Run-Length Encoded List

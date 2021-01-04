@@ -22,5 +22,16 @@
 // Output: "Sunday"
 
 var dayOfTheWeek = function(day, month, year) {
+  let days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday',
+  'Friday', 'Saturday'];
+  let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
+  month = months[month - 1];
+
+  return days[new Date(`${month} ${day}, ${year}` ).getDay()]
 };
+
+// Success
+// Details
+// Runtime: 68 ms, faster than 96.30% of JavaScript online submissions for Day of the Week.
+// Memory Usage: 38.8 MB, less than 48.15% of JavaScript online submissions for Day of the Week.
