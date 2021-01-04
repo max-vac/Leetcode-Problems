@@ -16,21 +16,29 @@
 // Output: "Qedo1ct-eeLg=ntse-T!"
 
 var reverseOnlyLetters = function(S) {
-  //create letterStack set to empty array
-  //create symbolQueue set to empty array
-  //create resultString set to empty string
+  let letterStack = [];
+  let symbolQueue = [];
+  let resultString = '';
 
-  //iterate over array
-    //if character code is greater than or equal to 65 and less than or equal to 90 or greater than or equal to 97 and less than or equal to 122
-      //push the value onto letterStack
-    //else
-      //push the value onto the symbolQueue;
+  for (let i = 0; i < S.length; i++) {
+    if ((S.charCodeAt(i) >= 65 && S.charCodeAt(i) <= 90) || (S.charCodeAt(i) >= 96 && S.charCodeAt(i) <= 122)) {
+      letterStack.push(S[i]);
+    } else {
+      symbolQueue.push(S[i]);
+    }
+  }
 
-  //iterate over array again
-    //if character code is greater than or equal to 65 and less than or equal to 90 or greater than or equal to 97 and less than or equal to 122
-      //add popped value from letterStack to resultString
-    //else
-      //add shifted value to the resultString
-
-  //return resultString;
+  for (let i = 0; i < S.length; i++) {
+    if ((S.charCodeAt(i) >= 65 && S.charCodeAt(i) <= 90) || (S.charCodeAt(i) >= 96 && S.charCodeAt(i) <= 122))   {
+      resultString += letterStack.pop();
+    } else {
+      resultString += symbolQueue.shift();
+    }
+  }
+  return resultString;
 };
+
+// Success
+// Details
+// Runtime: 76 ms, faster than 82.83% of JavaScript online submissions for Reverse Only Letters.
+// Memory Usage: 40.7 MB, less than 8.08% of JavaScript online submissions for Reverse Only Letters.
