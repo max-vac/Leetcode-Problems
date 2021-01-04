@@ -25,20 +25,23 @@
 // Output: [5,3,4,2,8,6,7,1,3]
 
 var arrayRankTransform = function(arr) {
-  //create copyArr set to arr.slice()
-  //set arr to sorted arr
-  //create obj set to empty obj
-  //create count variable set to 1
+  let copyArr = arr.slice();
+  arr = arr.sort((a, b) => {
+    return a - b;
+  })
+  let obj = {};
+  let count = 1;
 
+  for (let i = 0; i < arr.length; i++) {
+    if (!obj[arr[i]]) {
+      obj[arr[i]] = count;
+      count++;
+    }
+  };
 
-  //iterate over arr
-    //if value does not exist in obj
-      //set value to count
-      //increment count
+  for (let i = 0; i < copyArr.length; i++) {
+    copyArr[i] = obj[copyArr[i]]
+  };
 
-  //iterate over copyArr
-    //set copyArr[i] = obj[copy[i]]
-
-  //return arr
-
+  return copyArr;
 };
