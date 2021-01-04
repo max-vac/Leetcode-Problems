@@ -25,6 +25,7 @@ Daily Solutions to Leetcode Toy Problems
 #1213. Intersection of Three Sorted Arrays
 #1313. Decompress Run-Length Encoded List
 #1323. Maximum 69 Number
+#1331. Rank Transform of an Array
 #1342. Number of Steps to Reduce a Number to Zero
 #1389. Create Target Array in the Given Order
 #1394. Find Lucky Integer in an Array
