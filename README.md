@@ -29,6 +29,7 @@ Daily Solutions to Leetcode Toy Problems
 #1342. Number of Steps to Reduce a Number to Zero
 #1389. Create Target Array in the Given Order
 #1394. Find Lucky Integer in an Array
+#1408. String Matching in an Array
 #1426. Counting Elements
 #1431. Kids With the Greatest Number of Candies
 #1470. Shuffle the Array
