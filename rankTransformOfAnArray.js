@@ -45,3 +45,8 @@ var arrayRankTransform = function(arr) {
 
   return copyArr;
 };
+
+// Success
+// Details
+// Runtime: 244 ms, faster than 73.26% of JavaScript online submissions for Rank Transform of an Array.
+// Memory Usage: 67.8 MB, less than 40.70% of JavaScript online submissions for Rank Transform of an Array.
