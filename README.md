@@ -5,6 +5,7 @@ Daily Solutions to Leetcode Toy Problems
 #3. Longest Substring Without Repeating Characters
 #136. Single Number
 #243. Shortest Word Distance
+#266. Palindrome Permutation
 #500. Keyboard Row
 #509. Fibonacci Number
 #760. Find Anagram Mappings
@@ -15,6 +16,7 @@ Daily Solutions to Leetcode Toy Problems
 #884. Uncommon Words from Two Sentences
 #917. Reverse Only Letters
 #961. N-Repeated Element in Size 2N Array
+#985. Sum of Even Numbers After Queries
 #1064. Fixed Point
 #1085. Sum of Digits in the Minimum Number
 #1086. High Five
