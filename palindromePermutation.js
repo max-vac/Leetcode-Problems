@@ -16,18 +16,22 @@
 // Output: true
 
 var canPermutePalindrome = function(s) {
-  //create counter set to 0
-  //create letterObj set to empty obj
+  let counter = 0;
+  let letterObj = {};
 
-  //iterate over s string
-    //if no key of value then create one set to 1 else increment
+  for (let i = 0; i < s.length; i++) {
+    (!letterObj[s[i]]) ? letterObj[s[i]] = 1 : letterObj[s[i]]++;
+  }
 
-  //iterate over letterObj
-    //if value is odd increment counter
+  for (let letter in letterObj) {
+    if (letterObj[letter] % 2 === 1) counter++;
+  }
 
-  //if counter is greater than 1
-    //return false
-  //else
-    //return true
+  return (counter > 1) ? false : true;
 };
+
+// Success
+// Details
+// Runtime: 68 ms, faster than 96.77% of JavaScript online submissions for Palindrome Permutation.
+// Memory Usage: 38.6 MB, less than 34.19% of JavaScript online submissions for Palindrome Permutation.
 
