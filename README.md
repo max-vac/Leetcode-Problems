@@ -6,6 +6,7 @@ Daily Solutions to Leetcode Toy Problems
 #136. Single Number
 #243. Shortest Word Distance
 #266. Palindrome Permutation
+#485. Max Consecutive Ones
 #500. Keyboard Row
 #509. Fibonacci Number
 #760. Find Anagram Mappings
