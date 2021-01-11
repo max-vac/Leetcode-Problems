@@ -20,17 +20,16 @@
 // Output: 2
 
 var longestPalindrome = function(s) {
-  //create a charObj set to a new set()
+  let charObj = new Set();
 
+  for (let char of s) {
+    charObj.has(char) ? charObj.delete(char) : charObj.add(char);
+  }
 
-  //iterate over the s string
-    //if char is not in charObj
-      //delete value
-    //else
-      //add that value
-
-   //if the size of the set is greater than 1
-    //return the length of s - the absolute value of 1 - the size of the charObj
-  //else
-    //return the length of s
+  charObj.size > 1 ? return s.length - Math.abs(1 - charObj.size) : return s.length;
 };
+
+// Success
+// Details
+// Runtime: 84 ms, faster than 76.04% of JavaScript online submissions for Longest Palindrome.
+// Memory Usage: 40.2 MB, less than 38.89% of JavaScript online submissions for Longest Palindrome.
