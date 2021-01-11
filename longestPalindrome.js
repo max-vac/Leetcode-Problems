@@ -20,7 +20,17 @@
 // Output: 2
 
 var longestPalindrome = function(s) {
+  //create a charObj set to a new set()
 
 
+  //iterate over the s string
+    //if char is not in charObj
+      //delete value
+    //else
+      //add that value
 
+   //if the size of the set is greater than 1
+    //return the length of s - the absolute value of 1 - the size of the charObj
+  //else
+    //return the length of s
 };
