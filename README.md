@@ -26,6 +26,7 @@ Daily Solutions to Leetcode Toy Problems
 #1180. Count Substrings with Only One Distinct Letter
 #1165. Single-Row Keyboard
 #1185. Day of the Week
+#1189. Maximum Number of Balloons
 #1207. Unique Number of Occurrences
 #1213. Intersection of Three Sorted Arrays
 #1313. Decompress Run-Length Encoded List
