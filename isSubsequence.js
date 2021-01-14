@@ -20,18 +20,22 @@
 // Output: false
 
 var isSubsequence = function(s, t) {
-  //create i variable set to 0
-  //create j variable set to 0
+   let i = 0;
+   let j = 0;
 
-  //while i is less than length of s.length and j is less than t.length
-    //if value of s is equal to value of t
-      //increment i by 1
-      //increment j by 1
-    //else
-      //increment j by one
+   while (i < s.length && j< t.length) {
+     if (s[i] === t[j]) {
+       i++;
+       j++;
+     } else {
+       j++;
+     }
+   };
 
-  //if i === s.length - 1
-    //return true
-  ///else
-    //return false
+   return i === s.length ? true : false
 };
+
+// Success
+// Details
+// Runtime: 76 ms, faster than 87.55% of JavaScript online submissions for Is Subsequence.
+// Memory Usage: 38.7 MB, less than 69.61% of JavaScript online submissions for Is Subsequence.
