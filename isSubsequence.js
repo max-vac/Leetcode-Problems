@@ -20,5 +20,18 @@
 // Output: false
 
 var isSubsequence = function(s, t) {
+  //create i variable set to 0
+  //create j variable set to 0
 
+  //while i is less than length of s.length and j is less than t.length
+    //if value of s is equal to value of t
+      //increment i by 1
+      //increment j by 1
+    //else
+      //increment j by one
+
+  //if i === s.length - 1
+    //return true
+  ///else
+    //return false
 };
