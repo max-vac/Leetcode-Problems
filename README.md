@@ -3,6 +3,7 @@
 Daily Solutions to Leetcode Toy Problems
 
 #3. Longest Substring Without Repeating Characters
+#15. 3Sum
 #136. Single Number
 #243. Shortest Word Distance
 #266. Palindrome Permutation
