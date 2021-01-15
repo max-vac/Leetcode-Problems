@@ -18,6 +18,7 @@ Daily Solutions to Leetcode Toy Problems
 #788. Rotated Digits
 #806. Number of Lines To Write String
 #824. Goat Latin
+#860. Lemonade Change
 #884. Uncommon Words from Two Sentences
 #917. Reverse Only Letters
 #961. N-Repeated Element in Size 2N Array
