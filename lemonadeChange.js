@@ -38,26 +38,40 @@
 // Since not every customer received correct change, the answer is false.
 
 var lemonadeChange = function(bills) {
-  //create an billsObj with 5 and 10 and 20 as values
-  //create variable changeNeeded set to 0
+  let billsObj = {20: 0, 10: 0, 5: 0};
+  let changeNeeded = 0;
 
-  //iterate over bills
-    //if first element and value is 5
-      //add value to the billsObj
-      //add value to change
-      //else return false
+  for (let i = 0 ; i < bills.length; i++) {
 
-    //if changeNeeded
-    //while there is billsObj[20] and changeNeeded is >= than 20
-        //subtract 20 from changeNeeded
-        //decrement billsObj[20]
-      //while there is billsObj[10] and changeNeeded is >= than 10
-        //subtract 10 from changeNeeded
-        //decrement billsObj[10]
-      //while there is billsObj[5] and changeNeeded is >= 5
-        //subtract 5 from changeNeeded
-        //decrement billsObj[5]
-      //if changeNeeded does not equal 0 return false
+    if (bills[0] && bills[0] !== 5) {
+      return false;
+    } else {
+      billsObj[bills[i]]++;
+    };
 
-    //return true;
+    changeNeeded = bills[i] - 5;
+
+    if (changeNeeded) {
+      while (billsObj[20] && changeNeeded >= 20) {
+        changeNeeded -= 20;
+        billsObj[20]--;
+      }
+      while (billsObj[10] && changeNeeded >= 10) {
+        changeNeeded -= 10;
+        billsObj[10]--;
+      }
+      while (billsObj[5] && changeNeeded >= 5) {
+        changeNeeded -= 5;
+        billsObj[5]--;
+      }
+
+      if (changeNeeded !== 0) return false
+    }
+  }
+  return true;
 };
+
+// Success
+// Details
+// Runtime: 80 ms, faster than 94.18% of JavaScript online submissions for Lemonade Change.
+// Memory Usage: 41.2 MB, less than 25.93% of JavaScript online submissions for Lemonade Change.
