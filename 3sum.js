@@ -18,24 +18,33 @@
 // Output: []
 
 var threeSum = function(nums) {
-  //create result variable set to an empty array
+  nums = nums.sort((a, b) => a - b);
+  let result = [];
+  let j
+  let k
 
- //create variable j
- //create variable k
-
-
- //iterate over array nums
-   //if value of i is equal to previous value
-     //break;
-   //set j to i + 1
-   //set k to nums.length -1
-
- //while k > j
-   //if addition of j, k , i < 0
-     //increment j
-   //else if addition is > 0
-     //decrement k
-   //else if addition is equal to 0
-     //push array of values of i, j, k
-     //break
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] === nums[i - 1]) continue;
+    j = i + 1;
+    k = nums.length - 1;
+    while (k > j) {
+      if (nums[i] + nums[j] + nums[k] < 0) {
+        j++;
+      } else if (nums[i] + nums[j] + nums[k] > 0) {
+        k--;
+      } else if (nums[i] + nums[j] + nums[k] === 0) {
+        result.push([nums[i], nums[j], nums[k]]);
+        while (j < k && nums[j] === nums[j + 1]) j++;
+        while (j < k && nums[k] === nums[k + 1]) k--;
+        j++;
+        k--;
+      }
+    }
+  }
+  return result;
 };
+
+// Success
+// Details
+// Runtime: 132 ms, faster than 98.90% of JavaScript online submissions for 3Sum.
+// Memory Usage: 48.9 MB, less than 62.59% of JavaScript online submissions for 3Sum.
