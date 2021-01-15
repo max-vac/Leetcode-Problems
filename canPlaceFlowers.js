@@ -14,5 +14,17 @@
 // Output: false
 
 var canPlaceFlowers = function(flowerbed, n) {
-
+  if (flowerbed.length === 1 && flowerbed[0] === 0 && n === 1) return true
+  for (let i = 0; i < flowerbed.length; i++) {
+    if ((i === 0 && flowerbed[i] === 0 && flowerbed[i + 1] === 0) || (flowerbed[i] === 0 &&flowerbed[i - 1] === 0 && flowerbed[i + 1] === 0) ||  (i === flowerbed.length - 1 && flowerbed[i] === 0 &&flowerbed[i - 1] === 0)) {
+      flowerbed[i] = 1;
+      n -= 1;
+      if (n === 0) return true
+    }
+  }
 };
+
+// Success
+// Details
+// Runtime: 80 ms, faster than 91.12% of JavaScript online submissions for Can Place Flowers.
+// Memory Usage: 40.6 MB, less than 49.42% of JavaScript online submissions for Can Place Flowers.
