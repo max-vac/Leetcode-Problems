@@ -24,15 +24,17 @@
 // Output: 0
 
 var strStr = function(haystack, needle) {
-  //if needle is an empty string then return 0
-  //create variable j set to 0
+  if (needle === '') return 0;
+  let j = 0;
 
-  //iterate over haystack
-      //while values are the same
-       //if j is length of needle
-        //return i
-      //increment j
-    //reset j to 0
-
-  //return -1
+  for (let i = 0; i < haystack.length; i ++) {
+    while (haystack[i + j] === needle[j]) {
+      if (j === needle.length - 1) {
+        return i;
+      }
+      j++;
+    }
+    j = 0;
+  }
+  return -1;
 };
