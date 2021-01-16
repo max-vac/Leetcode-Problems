@@ -43,3 +43,22 @@ var strStr = function(haystack, needle) {
 // Details
 // Runtime: 2624 ms, faster than 11.07% of JavaScript online submissions for Implement strStr().
 // Memory Usage: 39 MB, less than 50.72% of JavaScript online submissions for Implement strStr().
+
+//Optimization
+
+var strStr = function(haystack, needle) {
+  if (needle === '') return 0;
+
+  for (let i = 0; i < haystack.length; i++) {
+    if (haystack[i] === needle[0]) {
+      if (haystack.substring(i, i + needle.length) === needle) {
+        return i;
+      }
+    }
+  }
+  return -1;
+};
+
+// Success
+// Runtime: 80 ms, faster than 70.25% of JavaScript online submissions for Implement strStr().
+// Memory Usage: 40.7 MB, less than 9.78% of JavaScript online submissions for Implement strStr().
