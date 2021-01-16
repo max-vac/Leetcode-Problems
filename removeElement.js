@@ -36,12 +36,18 @@
 // Explanation: Your function should return length = 5, with the first five elements of nums containing 0, 1, 3, 0, and 4. Note that the order of those five elements can be arbitrary. It doesn't matter what values are set beyond the returned length.
 
 var removeElement = function(nums, val) {
-  //create variable j set to 0
+  let j = 0;
 
-  //iterate over nums
-    //if nums[i] !== val
-      //num[j] = nums[i]
-      //increment j
-
-  //return j
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] !== val) {
+      nums[j] = nums[i];
+      j++;
+    }
+  }
+  return j;
 };
+
+// Success
+// Details
+// Runtime: 76 ms, faster than 85.41% of JavaScript online submissions for Remove Element.
+// Memory Usage: 38.7 MB, less than 52.34% of JavaScript online submissions for Remove Element.
