@@ -12,6 +12,7 @@ Daily Solutions to Leetcode Toy Problems
 #266. Palindrome Permutation
 #392. Is Subsequence
 #409. Longest Palindrome
+#459. Repeated Substring Pattern
 #485. Max Consecutive Ones
 #500. Keyboard Row
 #509. Fibonacci Number
