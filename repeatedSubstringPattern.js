@@ -18,21 +18,31 @@
 // Explanation: It's the substring "abc" four times. (And the substring "abcabc" twice.)
 
 var repeatedSubstringPattern = function(s) {
-  //create variable lps set to length of s
-  //set the first index (0) to 0
-  //create i variable set to 1;
-  //create len variable set to 0
+  let lps = new Array(s.length)
+  lps[0] = 0;
+  let i = 1;
+  let len = 0;
 
-  //while i is less than length of s
-    //if s[i] is equal to sp[len]
-      //increment len
-      //set the value of lps at i to len
-      //increment i
-    //else
-      //if len
-        //set len to the value of lps at len - 1
-      //else
-        //set lps at i to 0
-        //increment i
-    //return whether there is a len the s length % by the last index of the array is equal to 0
+  while (i < s.length) {
+    if (s[i] === s[len]) {
+      len++;
+      lps[i] = len;
+      i++;
+    } else {
+      if (len) {
+        len = lps[len - 1];
+      } else {
+        lps[i] = 0;
+        i++;
+      }
+    }
+  }
+
+ return (len && s.length % (s.length - lps[s.length - 1]) === 0) ? true : false
+  ;
 };
+
+// Success
+// Details
+// Runtime: 84 ms, faster than 90.14% of JavaScript online submissions for Repeated Substring Pattern.
+// Memory Usage: 43.4 MB, less than 74.65% of JavaScript online submissions for Repeated Substring Pattern.
