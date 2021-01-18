@@ -23,16 +23,22 @@
 // Output: 2
 
 var maxArea = function(height) {
-  //create variable i set to 0
-  //create varaiable j set to heights length
-  //create maxWater variable set to 0;
+  let i = 0;
+  let j = height.length - 1;
+  let maxWater = -Infinity;
 
-  //while i < j
-    //set maxWater to max value of maxWater and min of value i and j times j - i
-    //if value at i is greater than value at j
-      //decrement j
-    //else
-      //increment i
-
-  //return maxWater
+  while (i < j) {
+    maxWater = Math.max(maxWater, (Math.min(height[i], height[j]) * (j - i)));
+    if (height[i] > height[j]) {
+      j--;
+    } else {
+      i++;
+    }
+  }
+  return maxWater;
 };
+
+// Success
+// Details
+// Runtime: 72 ms, faster than 98.72% of JavaScript online submissions for Container With Most Water.
+// Memory Usage: 40.1 MB, less than 97.93% of JavaScript online submissions for Container With Most Water.
