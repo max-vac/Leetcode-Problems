@@ -8,6 +8,7 @@ Daily Solutions to Leetcode Toy Problems
 #26. Remove Duplicates from Sorted Array
 #27. Remove Element
 #28. Implement strStr()
+#94. Binary Tree Inorder Traversal
 #136. Single Number
 #243. Shortest Word Distance
 #266. Palindrome Permutation
