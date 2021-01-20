@@ -18,22 +18,25 @@
 // Output: []
 
 var pathSum = function(root, targetSum) {
-  //create sums variable set to an empty array
-  //if no node then return sums
+  let sums = [];
+  if (!root) return sums;
 
-  //make call to dfs helper function with params (node, [], sum, targetSum)
-  //return sums
+  dfs(root, 0, [], sums, targetSum);
+  return sums;
 };
 
-//create dfs function with params (node, sums, nums, target)
-  //add node val to sum
-  //push val to nums
-  //if no children
-    //if sum === target
-    //push nums to sums
+let dfs = (node, sum, nums, sums, targetSum) => {
+  sum += node.val;
+  nums.push(node.val);
 
-  //if(node.left)
-    //call dfs with node.left, sums, nums, target
-  //if(node.right)
-        //call dfs with node.right, sums, nums, target
+  if (!node.left && !node.right && sum === targetSum) sums.push(nums);
 
+  if (node.left) dfs(node.left, sum, nums.slice(), sums, targetSum);
+  if (node.right) dfs(node.right, sum, nums.slice(), sums, targetSum);
+};
+
+
+// Success
+// Details
+// Runtime: 96 ms, faster than 74.80% of JavaScript online submissions for Path Sum II.
+// Memory Usage: 49.9 MB, less than 10.96% of JavaScript online submissions for Path Sum II.
