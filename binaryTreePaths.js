@@ -19,23 +19,26 @@
 // Explanation: All root-to-leaf paths are: 1->2->5, 1->3
 
 var binaryTreePaths = function(root) {
-  //create a paths variable set to an empty array
+  let paths = [];
 
-  //if there is no root (aka its an empty tree)
-    //return paths (an empty array)
+  if (!root) return paths;
 
-  //call the helper function dfs with three params (root, an empty string and the paths array)
-  //return the paths array
-}
+  dfs(root, '', paths);
+  return paths;
+};
 
-//create helper function called dfs with the params node, path(singular), and the paths(the array with lists of paths)
-  //add the current node value to the path variable
+let dfs = (node, path, paths) => {
+  path += node.val;
 
-  //if there are no children (no left or right node)
-    //then we have reached a leaf and need to add the path to the paths array
+  if (!node.left && !node.right) paths.push(path);
 
-  //add the -> to the paths casue there are more node values to add to the current path
-  //if theres a left node
-    //call dfs with node.left, path, and paths
-  //if theres a right node
-    //call dfs with right.node, path, and paths
+  path += '->';
+
+  if (node.left) dfs(node.left, path, paths);
+  if (node.right) dfs(node.right, path, paths);
+};
+
+// Success
+// Details
+// Runtime: 76 ms, faster than 96.17% of JavaScript online submissions for Binary Tree Paths.
+// Memory Usage: 40.3 MB, less than 56.34% of JavaScript online submissions for Binary Tree Paths.
