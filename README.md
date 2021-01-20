@@ -11,6 +11,7 @@ Daily Solutions to Leetcode Toy Problems
 #94. Binary Tree Inorder Traversal
 #136. Single Number
 #243. Shortest Word Distance
+#257. Binary Tree Paths
 #266. Palindrome Permutation
 #392. Is Subsequence
 #409. Longest Palindrome
