@@ -18,12 +18,14 @@
 // Output: false
 
 var isSameTree = function(p, q) {
-  //base cases
-  //if the nodes p and the nodes q are null then return true (want them the same)
+  if (!p && !q) return true;
+  if (!p || !q) return false;
+  if (p.val !== q.val) return false;
 
-  //if the nodes p or the nodes q are null then return false (both null will be caught from above)
-
-  //if node values are different than return false
-
-  //return call isSameTree on both left nodes of q and p and call isSameTree on both right nodes of p and q
+  return isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
 };
+
+// Success
+// Details
+// Runtime: 76 ms, faster than 82.21% of JavaScript online submissions for Same Tree.
+// Memory Usage: 38.9 MB, less than 39.94% of JavaScript online submissions for Same Tree.
