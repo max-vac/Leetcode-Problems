@@ -35,21 +35,29 @@
 // Therefore, sum = 495 + 491 + 40 = 1026.
 
 var sumNumbers = function(root) {
-  //if no root reutrn null
-  //create sum variable set to 0
+  if (!root) return 0;
+  let sum = 0;
 
-  //call dfs on root and sum ''
+  dfs(root, sum, '');
 
-  //return sum
+  return sum;
 };
 
 let dfs = (node, sum, pathSum) => {
-  //add node.val to pathSum (this is a string)
+  pathSum += node.val;
 
-  //if no children
-      //convert pathSum to number
-      //add pathSums to sums
-      //return sums;
-  //call dfs on node.left sum and pathSum
-  //call dfs on node.right sum and pathSum
+  if (!node.left && !node.right) {
+    pathSum = Number(pathSum);
+    sum += pathSum;
+    return sum;
+  }
+
+  if (node.left && node.right) return dfs(node.left, sum, pathSum) + dfs(node.right, sum, pathSum);
+  if (node.left) return dfs(node.left, sum, pathSum);
+  if (node.right) return dfs(node.right, sum, pathSum);
 }
+
+// Success
+// Details
+// Runtime: 64 ms, faster than 100.00% of JavaScript online submissions for Sum Root to Leaf Numbers.
+// Memory Usage: 40.1 MB, less than 76.22% of JavaScript online submissions for Sum Root to Leaf Numbers.
