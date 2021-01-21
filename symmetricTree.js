@@ -19,15 +19,21 @@
 //    3    3
 
 var isSymmetric = function(root) {
-  //if no root then return true
+  if (!root) return true;
 
-  //return call dfs helper function with left node and right node as params
+  return dfs(root.left, root.right);
 };
 
 let dfs = (node1, node2) => {
-  //if neither node1 && node2 return true
-  //if if node1 or node2 is null then return false;
-  //return if the val of node1 and node2 are the same
-    //and call dfs on node1 left and node2 right
-    //and call dfs on node1 right and node2 left
+  if (!node1 && !node2) return true;
+  if (!node1 || !node2) return false;
+
+  return (node1.val === node2.val)
+    && dfs(node1.left, node2.right)
+    && dfs(node1.right, node2.left);
 }
+
+// Success
+// Details
+// Runtime: 80 ms, faster than 97.11% of JavaScript online submissions for Symmetric Tree.
+// Memory Usage: 40.6 MB, less than 27.72% of JavaScript online submissions for Symmetric Tree.
