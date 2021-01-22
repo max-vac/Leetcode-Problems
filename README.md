@@ -18,6 +18,7 @@ Daily Solutions to Leetcode Toy Problems
 #257. Binary Tree Paths
 #266. Palindrome Permutation
 #392. Is Subsequence
+#404. Sum of Left Leaves
 #409. Longest Palindrome
 #459. Repeated Substring Pattern
 #485. Max Consecutive Ones
