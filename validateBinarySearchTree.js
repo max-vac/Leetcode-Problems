@@ -19,14 +19,17 @@
 // Explanation: The root node's value is 5 but its right child's value is 4.
 
 var isValidBST = function(root) {
-  //return call to isValid helper function with three params (node/root, low(-Infinity), high(Infinity))
+  return isValid(root, -Infinity, Infinity);
 };
 
 let isValid = (node, low, high) => {
-  //if there is no node return true (does not affect outcome)
-  //if (node val is less than low or node val is greater than high)
-    //return false
+  if (!node) return true;
+  if (low >= node.val || high <= node.val) return false;
 
-  //return calls to isValid with the left node low and the node val for the new high
-    //and call to isValid with the right node and the node.val for the new low and high
+  return isValid(node.left, low, node.val) && isValid(node.right, node.val, high);
 };
+
+// Success
+// Details
+// Runtime: 84 ms, faster than 91.02% of JavaScript online submissions for Validate Binary Search Tree.
+// Memory Usage: 42.6 MB, less than 60.23% of JavaScript online submissions for Validate Binary Search Tree.
