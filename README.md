@@ -9,6 +9,7 @@ Daily Solutions to Leetcode Toy Problems
 #27. Remove Element
 #28. Implement strStr()
 #94. Binary Tree Inorder Traversal
+#98. Validate Binary Search Tree
 #100. Same Tree
 #101. Symmetric Tree
 #113. Path Sum II
