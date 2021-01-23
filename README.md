@@ -37,6 +37,7 @@ Daily Solutions to Leetcode Toy Problems
 #884. Uncommon Words from Two Sentences
 #917. Reverse Only Letters
 #961. N-Repeated Element in Size 2N Array
+#965. Univalued Binary Tree
 #985. Sum of Even Numbers After Queries
 #1064. Fixed Point
 #1085. Sum of Digits in the Minimum Number
