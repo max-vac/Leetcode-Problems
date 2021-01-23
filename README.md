@@ -57,6 +57,7 @@ Daily Solutions to Leetcode Toy Problems
 #1408. String Matching in an Array
 #1426. Counting Elements
 #1431. Kids With the Greatest Number of Candies
+#1469. Find All The Lonely Nodes
 #1470. Shuffle the Array
 #1588. Sum of All Odd Length Subarrays
 #1603. Design Parking System
