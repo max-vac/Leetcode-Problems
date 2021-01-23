@@ -25,6 +25,7 @@ Daily Solutions to Leetcode Toy Problems
 #485. Max Consecutive Ones
 #500. Keyboard Row
 #509. Fibonacci Number
+#563. Binary Tree Tilt
 #605. Can Place Flowers
 #621. Task Scheduler
 #760. Find Anagram Mappings
