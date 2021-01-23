@@ -31,16 +31,23 @@
 // Output: 9
 
 var findTilt = function(root) {
-  //create sum variable set to 0
+  let sum = 0;
 
-  //create addNodes function with one param node
-    //if there is no node return 0
+  let addNodes = (node) => {
+    if (!node) return 0;
 
-    //create left variable set to the call to addNodes with node.left as the param
-    //create right variable se to the call of addNodes with node.right as the param
-    //increment sum with the absolute value of left minus right
+    let left = addNodes(node.left);
+    let right = addNotes(node.right);
 
-    //return the values of left plus right plus node.val (this will give you the value of each subtree)
-  //invoke the addNodes function with root as the param
-  //return sum
+    sum += Math.abs(left - right);
+    return left + right + node.val;
+  };
+
+  addNodes(root);
+  return sum;
 };
+
+// Success
+// Details
+// Runtime: 88 ms, faster than 87.19% of JavaScript online submissions for Binary Tree Tilt.
+// Memory Usage: 43.3 MB, less than 68.97% of JavaScript online submissions for Binary Tree Tilt.
