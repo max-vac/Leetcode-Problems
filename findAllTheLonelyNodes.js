@@ -33,20 +33,23 @@
 // Output: [78,28]
 
 var getLonelyNodes = function(root) {
-  //create lonelyNodes variable set to an empty array
-  //if no root then return lonelyNodes;
+  let lonelyNodes = []
+  if (!root) return lonelyNodes;
 
-  //create function findNodes with node as the param
-    //if no node then just return
+  let findNodes = (node) => {
+    if (!node) return;
 
-    //if there is a node.right and not a node.left
-      //push node.right.val to the lonelyNodes array
-    //if there is a node.left and not a node.right
-      //push the node.left.val to the lonelyNodes array
+    if (!node.left && node.right) lonelyNodes.push(node.right.val);
+    if (!node.right && node.left) lonelyNodes.push(node.left.val);
 
-    //invoke the findNodes function on the left node
-    //invoke the findNodes function on the right node
+    findNodes(node.left);
+    findNodes(node.right);
+  };
 
-  //invoke the findNodes function with the root of the tree
-  //return lonelyNodes
+  findNodes(root);
+  return lonelyNodes;
 };
+
+// Details
+// Runtime: 84 ms, faster than 98.03% of JavaScript online submissions for Find All The Lonely Nodes.
+// Memory Usage: 43.2 MB, less than 86.18% of JavaScript online submissions for Find All The Lonely Nodes.
