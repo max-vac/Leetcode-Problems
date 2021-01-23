@@ -14,14 +14,19 @@
 // Output: false
 
 var isUnivalTree = function(root) {
-  //if no root return true
-  //return call to findValues functino with two params(the root, and the roots value)
+  if (!root) return true;
+  return findValues(root, root.val);
 };
 
 let findValues = (node, val) => {
-  //if no node then return true
+  if (!node) return true;
 
-  //if the node value does not equal the val then return true
+  if (node.val !== val) return false;
 
-  //return the returns of the call to the left node and the right node
+  return findValues(node.left, val) && findValues(node.right, val);
 };
+
+// Success
+// Details
+// Runtime: 56 ms, faster than 100.00% of JavaScript online submissions for Univalued Binary Tree.
+// Memory Usage: 38.9 MB, less than 71.20% of JavaScript online submissions for Univalued Binary Tree.
