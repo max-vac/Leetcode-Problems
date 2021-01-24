@@ -14,24 +14,32 @@
 // Output: [1]
 
 var merge = function(nums1, m, nums2, n) {
-  //decrent m for proper index
-  //decrement n for proper index
-  //create variable k set to nums1.length minus 1
+  m--;
+  n--;
+  let k = nums1.length - 1;
 
-  //while k is greater than or equal to
-    //if m is less than 0 (there are no more items in the array)
-      //set the nums1 array at index k to nums2 at n
-      //decrement n
-    //else if n is less than 0 (there are no more items in the second array)
-      //set the nums1 array at index k to nums1 at m
-      //decrement m
-    //else
-      //if nums1 at index m is greater than nums2 at index n
-        //set nums1 array at index k to nums1 at index m
-        //decrement m
-      //else
-        //set nums1 at index k to nums2 at index n
-        //decrement n
-
-  //return nums1;
+ while (k >= 0) {
+   if (m < 0) {
+       nums1[k] = nums2[n];
+       n--
+    } else if (n < 0) {
+        nums1[k] = nums1[m]
+        m--
+    } else {
+        if (nums1[m] > nums2[n]) {
+            nums1[k] = nums1[m];
+            m--;
+        } else {
+            nums1[k] = nums2[n];
+            n--;
+        }
+    }
+    k--;
+  }
+  return nums1;
 };
+
+// Success
+// Details
+// Runtime: 76 ms, faster than 84.96% of JavaScript online submissions for Merge Sorted Array.
+// Memory Usage: 38.4 MB, less than 81.84% of JavaScript online submissions for Merge Sorted Array.
