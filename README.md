@@ -40,6 +40,7 @@ Daily Solutions to Leetcode Toy Problems
 #917. Reverse Only Letters
 #961. N-Repeated Element in Size 2N Array
 #965. Univalued Binary Tree
+#977. Squares of a Sorted Array
 #985. Sum of Even Numbers After Queries
 #1064. Fixed Point
 #1085. Sum of Digits in the Minimum Number
