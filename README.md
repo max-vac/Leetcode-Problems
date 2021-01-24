@@ -9,6 +9,7 @@ Daily Solutions to Leetcode Toy Problems
 #27. Remove Element
 #28. Implement strStr()
 #76. Minimum Window Substring
+#88. Merge Sorted Array
 #94. Binary Tree Inorder Traversal
 #98. Validate Binary Search Tree
 #100. Same Tree
