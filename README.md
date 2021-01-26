@@ -28,6 +28,7 @@ Daily Solutions to Leetcode Toy Problems
 #500. Keyboard Row
 #509. Fibonacci Number
 #563. Binary Tree Tilt
+#599. Minimum Index Sum of Two Lists
 #605. Can Place Flowers
 #621. Task Scheduler
 #760. Find Anagram Mappings
