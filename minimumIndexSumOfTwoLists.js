@@ -28,25 +28,29 @@
 // Output: ["KFC"]
 
 var findRestaurant = function(list1, list2) {
-  //create listObj set to and empty obj
-  //create a minSum variable set to Infinity
-  //create result variable set to an empty array
+  let listMap = new Map();
+  let minSum = Infinity;
+  let result = [];
+  for (let i = 0; i < list1.length; i++) {
+    listMap.set(list1[i], i)
+  }
 
-  //iterate over the list1 arr
-    //set the key to the value and the value as the index
-
-  //iterate over list2 arr
-
-    //if the value is in listObj
-      //create sum equal to the index of current value and the value to the key in listObj
-      //if sum is less than minSum
-        //set value of minSum to sum
-      //if listObj minSum is present
-        //push onto the array
-      //else
-        //set listObj minSum to an array with the value present
-
-  //return listObj[minSum]
-
-
+  for (let k = 0; k < list2.length; k++) {
+    if (listMap.has(list2[k])) {
+      let sum = listMap.get(list2[k]) + k;
+      if (sum < minSum) {
+        result = [];
+        result.push(list2[k]);
+        minSum = sum
+      } else if (sum === minSum) {
+        result.push(list2[k])
+      }
+    }
+  }
+  return result;
 };
+
+// Success
+// Details
+// Runtime: 100 ms, faster than 92.33% of JavaScript online submissions for Minimum Index Sum of Two Lists.
+// Memory Usage: 45.5 MB, less than 81.15% of JavaScript online submissions for Minimum Index Sum of Two Lists.
