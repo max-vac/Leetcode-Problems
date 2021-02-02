@@ -17,6 +17,7 @@ Daily Solutions to Leetcode Toy Problems
 #113. Path Sum II
 #129. Sum Root to Leaf Numbers
 #136. Single Number
+#167. Two Sum II - Input array is sorted
 #243. Shortest Word Distance
 #257. Binary Tree Paths
 #266. Palindrome Permutation
@@ -32,6 +33,7 @@ Daily Solutions to Leetcode Toy Problems
 #605. Can Place Flowers
 #621. Task Scheduler
 #760. Find Anagram Mappings
+#767. Reorganize String
 #771. Jewels and Stones
 #788. Rotated Digits
 #806. Number of Lines To Write String
