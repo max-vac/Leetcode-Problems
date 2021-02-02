@@ -21,15 +21,21 @@
 // Output: [1,2]
 
 var twoSum = function(numbers, target) {
-  //create left variable set to 0
-  //create right variable set to numbers.length - 1
+  let left = 0;
+  let right = numbers.length - 1;
 
-  //while left is less than right
-    //if left plus right is greater than target
-      //decrement right
-    //else
-      //increment left
-
-  //if value of left plus right is equal to target
-    //return and array with left and right as values
+  while (left < right) {
+    if ((numbers[left] + numbers[right]) === target) {
+      return [left + 1, right + 1]
+    } else if ((numbers[left] + numbers[right]) > target) {
+      right--;
+    } else {
+      left++;
+    }
+  }
 };
+
+// Success
+// Details
+// Runtime: 72 ms, faster than 97.22% of JavaScript online submissions for Two Sum II - Input array is sorted.
+// Memory Usage: 39 MB, less than 36.06% of JavaScript online submissions for Two Sum II - Input array is sorted.
