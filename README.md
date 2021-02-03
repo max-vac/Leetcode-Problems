@@ -3,6 +3,7 @@
 Daily Solutions to Leetcode Toy Problems
 
 #3. Longest Substring Without Repeating Characters
+#2. Add Two Numbers
 #11. Container With Most Water
 #15. 3Sum
 #26. Remove Duplicates from Sorted Array
@@ -15,6 +16,7 @@ Daily Solutions to Leetcode Toy Problems
 #100. Same Tree
 #101. Symmetric Tree
 #113. Path Sum II
+#125. Valid Palindrome
 #129. Sum Root to Leaf Numbers
 #136. Single Number
 #167. Two Sum II - Input array is sorted
