@@ -19,28 +19,40 @@
 // Output: [8,9,9,9,0,0,0,1]
 
 var addTwoNumbers = function(l1, l2) {
-  //create firstCurrent set to l1;
-  //create secondCurrent set to l2;
-  //create variable firstCount set to 0;
-  //create variable secondCount set to 0;
-  //create variable firstSum set to 0;
-  //create variable secondSum set to 0;
-  //create variable totalSum set to 0;
-  //create variable sumArr set to an empty array
+  let firstCount = 0;
+  let secondCount = 0;
+  let firstSum = 0;
+  let secondSum = 0;
+  let sumLinkedList;
 
-  //while l1 has a next property
-    //set firstSum to its current value plus the val times 10 to the current count
-    //traverse l1
-    //increment firstCount by one
-  //while l2 has a next property
-    //set secondSum to its current value plus the val times 10 to the current count
-    //traverse l2
-    //increment secondCount by one
+  while (l1) {
+    firstSum += (10 ** firstCount) * l1.val;
+    l1 = l1.next;
+    firstCount++;
+  }
 
-  //set totalSum to the value of firstSum plus secondSum converted to a string
+  while (l2) {
+    secondSum += (10 ** secondCount) * l2.val;
+    l2 = l2.next;
+    secondCount++;
+  }
+    console.log(typeof BigInt(firstSum))
 
-  //iterate over totalSum
-    //push values to sumArr and convert them to number using parseInt
+  let totalSum = (parseInt(firstSum) + parseInt(secondSum)).toString();
+  let totalCount = totalSum.length - 1;
+  let totalCurrent;
 
-  //return arrNum
+  while (totalCount >= 0) {
+      if (sumLinkedList === undefined) {
+          sumLinkedList = new ListNode(parseInt(totalSum[totalCount]));
+          totalCurrent = sumLinkedList;
+          totalCount--;
+      } else {
+          totalCurrent.next = new ListNode(parseInt(totalSum[totalCount]));
+          totalCurrent = totalCurrent.next;
+          totalCount--;
+      }
+  }
+
+  return sumLinkedList;
 };
