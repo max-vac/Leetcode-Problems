@@ -20,6 +20,8 @@
 // Input: nums = [3,3], target = 6
 // Output: [0,1]
 
+//solution 1 linear solution
+
 var twoSum = function(nums, target) {
   let copyNums = nums.slice();
   nums = nums.sort((a, b) => a - b);
@@ -41,3 +43,23 @@ var twoSum = function(nums, target) {
 // Details
 // Runtime: 80 ms, faster than 63.62% of JavaScript online submissions for Two Sum.
 // Memory Usage: 39.6 MB, less than 13.14% of JavaScript online submissions for Two Sum.
+
+//solution #2 one pass with hash map
+
+var twoSum = function(nums, target) {
+  let counterPart = {};
+
+  for (let i = 0; i < nums.length; i++) {
+    let currentDif = target - nums[i];
+
+    if (counterPart.hasOwnProperty(currentDif)) {
+      return [i, counterPart[currentDif]]
+    }
+    counterPart[nums[i]] = i;
+  }
+};
+
+// Success
+// Details
+// Runtime: 72 ms, faster than 94.30% of JavaScript online submissions for Two Sum.
+// Memory Usage: 39 MB, less than 29.79% of JavaScript online submissions for Two Sum.
