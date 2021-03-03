@@ -4,6 +4,7 @@ Daily Solutions to Leetcode Toy Problems
 
 #3. Longest Substring Without Repeating Characters
 #2. Add Two Numbers
+#9. Palindrome Number
 #11. Container With Most Water
 #15. 3Sum
 #26. Remove Duplicates from Sorted Array
