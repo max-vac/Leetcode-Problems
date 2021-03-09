@@ -29,13 +29,28 @@
 // Output: true
 
 var isValid = function (s) {
-  //create an closingBrackets obj with the values of the closing bracket as keys and the opening bracket as the values
-  //create an openingBracketsStack array to be used as a stack
-  //iterate over the s variable
-  //if the value is not in the closingBrackets obj
-  //push it to the openingBracketsStack
-  //else
-  //if the value of the closingBrackets is not equal to the value of openingBrackets pop()
-  //return false
-  //return true
+  const closingBrackets = {
+    ')': '(',
+    ']': '[',
+    '}': '{',
+  };
+
+  let openingBracketsStack = [];
+
+  for (let i = 0; i < s.length; i++) {
+    console.log(openingBracketsStack);
+    if (!closingBrackets[s[i]]) {
+      openingBracketsStack.push(s[i]);
+    } else {
+      console.log('the else statment: ', s[i]);
+      if (closingBrackets[s[i]] !== openingBracketsStack.pop()) return false;
+    }
+  }
+
+  return openingBracketsStack.length ? false : true;
 };
+
+// Success
+// Details
+// Runtime: 72 ms, faster than 95.80% of JavaScript online submissions for Valid Parentheses.
+// Memory Usage: 38.5 MB, less than 93.87% of JavaScript online submissions for Valid Parentheses.
