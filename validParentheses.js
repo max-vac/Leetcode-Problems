@@ -38,11 +38,9 @@ var isValid = function (s) {
   let openingBracketsStack = [];
 
   for (let i = 0; i < s.length; i++) {
-    console.log(openingBracketsStack);
     if (!closingBrackets[s[i]]) {
       openingBracketsStack.push(s[i]);
     } else {
-      console.log('the else statment: ', s[i]);
       if (closingBrackets[s[i]] !== openingBracketsStack.pop()) return false;
     }
   }
