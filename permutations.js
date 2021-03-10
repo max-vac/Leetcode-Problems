@@ -16,16 +16,21 @@
 // Output: [[1]]
 
 var permute = function (nums) {
-  //create variable resultArr set to an empty array
-  //invoke function of getPerms with then nums array and a tempArr set to an empty array
-  //return resultArr
+  let permResults = [];
+  let getPerms = (arr, tempArr = []) => {
+    if (!arr.length) permResults.push(tempArr);
+
+    for (let i = 0; i < arr.length; i++) {
+      let remainderNums = arr.slice();
+      let nextNum = remainderNums.splice(i, 1);
+      getPerms(remainderNums, tempArr.concat(nextNum));
+    }
+  };
+  getPerms(nums, (tempArr = []));
+  return permResults;
 };
 
-var getPerms = (arr, tempArr = []) => {
-  //if arr length is equal to 0
-  //return an empty array
-  //iterate over the arr variable
-  //set remainderArr to a slice of the arr
-  //set nextNum to splice of remainderArr of (i, 1)
-  //invoke getPerms with remainderNums and the tempArr concat with nextNum
-};
+// Success
+// Details
+// Runtime: 84 ms, faster than 98.76% of JavaScript online submissions for Permutations.
+// Memory Usage: 41.4 MB, less than 83.63% of JavaScript online submissions for Permutations.
