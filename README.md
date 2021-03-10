@@ -8,6 +8,7 @@ Daily Solutions to Leetcode Toy Problems
 #9. Palindrome Number
 #11. Container With Most Water
 #15. 3Sum
+#20. Valid Parentheses
 #26. Remove Duplicates from Sorted Array
 #27. Remove Element
 #28. Implement strStr()
