@@ -12,6 +12,7 @@ Daily Solutions to Leetcode Toy Problems
 #26. Remove Duplicates from Sorted Array
 #27. Remove Element
 #28. Implement strStr()
+#39. Combination Sum
 #76. Minimum Window Substring
 #88. Merge Sorted Array
 #94. Binary Tree Inorder Traversal
