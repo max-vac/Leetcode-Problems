@@ -33,15 +33,25 @@
 // Output: [[1,1]]
 
 var combinationSum = function (candidates, target) {
-  //create result variable set to an empty array to collect the arrays from helper function
-  //create helper function getCombinations
-  //getCombinations has params start, sum, currentArr
-  //if the sum equals the target the push the currentArr copy into the result array
-  //if the sum is larger than the target then return
-  //loop over the candidates array set i to the start which will be 0 by default
-  //push the value at index i in the candidate to the currentArr array
-  //call thew getCombinations function with the start set to i, the sum set to sum + the value at candidate i, and the currentArr
-  //remove the last value of the currentArr
-  //initiate the getCombinations function(all values will be set in the default)
-  //return result array
+  let result = [];
+
+  let getCombinations = (start = 0, sum = 0, currentArr = []) => {
+    if (sum === target) result.push([...currentArr]);
+    if (sum > target) return;
+
+    for (let i = start; i < candidates.length; i++) {
+      currentArr.push(candidates[i]);
+
+      getCombinations(i, sum + candidates[i], currentArr);
+      currentArr.pop();
+    }
+  };
+
+  getCombinations();
+  return result;
 };
+
+// Success
+// Details
+// Runtime: 88 ms, faster than 92.80% of JavaScript online submissions for Combination Sum.
+// Memory Usage: 40.9 MB, less than 66.64% of JavaScript online submissions for Combination Sum.
