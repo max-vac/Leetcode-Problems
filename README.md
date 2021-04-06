@@ -7,11 +7,14 @@ Daily Solutions to Leetcode Toy Problems
 #7. Reverse Integer
 #9. Palindrome Number
 #11. Container With Most Water
+#14. Longest Common Prefix
 #15. 3Sum
+#16. 3Sum Closest
 #20. Valid Parentheses
 #26. Remove Duplicates from Sorted Array
 #27. Remove Element
 #28. Implement strStr()
+#35. Search Insert Position
 #39. Combination Sum
 #76. Minimum Window Substring
 #88. Merge Sorted Array
