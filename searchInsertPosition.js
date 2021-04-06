@@ -46,17 +46,28 @@ var searchInsert = function (nums, target) {
 // Memory Usage: 39.2 MB, less than 9.96% of JavaScript online submissions for Search Insert Position.
 
 var searchInsert = function (nums, target) {
-  //create left pointer set to 0;
-  //create right pointer set to nums length - 1
-  //create mid pointer set to nums length / 2 rounded down
-  //if target is less than left return 0
-  //if target is greater than right return nums.length
-  //while left pointer is less than right pointer
-  //set mid to left plus right / 2 rounded down
-  //if mid equals target return mid
-  //if target is less than mid
-  //set left to value of mid plus one
-  //if target is greater than mid
-  //set right to mid minus one
-  //return mid
+  let left = 0;
+  let right = nums.length - 1;
+  let mid;
+
+  if (target < nums[left]) return 0;
+  if (target > nums[right]) return nums.length;
+
+  while (left <= right) {
+    mid = Math.floor((left + right) / 2);
+
+    if (nums[mid] === target) {
+      return mid;
+    } else if (nums[mid] > target) {
+      right = mid - 1;
+    } else {
+      left = mid + 1;
+    }
+  }
+  return left;
 };
+
+// Success
+// Details
+// Runtime: 68 ms, faster than 98.39% of JavaScript online submissions for Search Insert Position.
+// Memory Usage: 38.7 MB, less than 74.10% of JavaScript online submissions for Search Insert Position.
