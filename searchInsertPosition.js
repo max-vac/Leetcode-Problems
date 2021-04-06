@@ -25,12 +25,22 @@
 // Output: 0
 
 var searchInsert = function (nums, target) {
-  //iterate though nums array
-  //if value of nums array is equal to the target return the index
-  //if value is both greater than the value of index -1 and less than value of index + 1
-  //return index
-  //if value is less than index and index is 0
-  //return 0
-  //if values is greater than index and index is equal to nums length
-  //return num.length + 1
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] === target || (nums[i - 1] < target && nums[i + 1] > target)) {
+      return i;
+    }
+
+    if (nums[i] > target && i === 0) {
+      return 0;
+    }
+
+    if (nums[i] < target && i === nums.length - 1) {
+      return nums.length;
+    }
+  }
 };
+
+// Success
+// Details
+// Runtime: 76 ms, faster than 79.59% of JavaScript online submissions for Search Insert Position.
+// Memory Usage: 39.2 MB, less than 9.96% of JavaScript online submissions for Search Insert Position.
