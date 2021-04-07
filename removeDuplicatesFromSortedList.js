@@ -13,11 +13,23 @@
 // Output: [1,2,3]
 
 var deleteDuplicates = function (head) {
-  //set currentNode to head
-  //previous node set to head
-  //while currentNode next is not null
-  //if currentNode.val !== previousNode
-  //set previousNode.next to currentNode
-  //set previousNode to currentNode
-  //set currentNode to currentNode.next
+  let currentNode = head;
+  let previousNode = head;
+
+  while (currentNode) {
+    if (currentNode.val === previousNode.val) {
+      previousNode.next = currentNode.next;
+      currentNode = currentNode.next;
+    } else {
+      previousNode = currentNode;
+      currentNode = currentNode.next;
+    }
+  }
+
+  return head;
 };
+
+// Success
+// Details
+// Runtime: 88 ms, faster than 79.96% of JavaScript online submissions for Remove Duplicates from Sorted List.
+// Memory Usage: 40.2 MB, less than 83.45% of JavaScript online submissions for Remove Duplicates from Sorted List.
