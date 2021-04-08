@@ -13,16 +13,26 @@
 // Output: [2,3]
 
 var deleteDuplicates = function (head) {
-  //create sentinel
-  //create previousNode set to the sentinel
-  //create currentNode set to the head
-  //while currentNode
-  //if currentNode val is equal to the currentNode.next val
-  //while currentNode.val is equal to currentNode.next
-  //set currentNode to currentNode.next
-  //set previousNode.next to currentNode.next.next
-  //else
-  //set previous to previous.next
-  //currentNode = currentNode.next
-  //return sentinel.next
+  let sentinel = new ListNode(0, head);
+  let previousNode = sentinel;
+  let currentNode = head;
+
+  while (currentNode) {
+    if (currentNode.next && currentNode.val === currentNode.next.val) {
+      while (currentNode.next && currentNode.val === currentNode.next.val) {
+        currentNode = currentNode.next;
+      }
+      previousNode.next = currentNode.next;
+    } else {
+      previousNode = previousNode.next;
+    }
+    currentNode = currentNode.next;
+  }
+
+  return sentinel.next;
 };
+
+// Success
+// Details
+// Runtime: 76 ms, faster than 97.90% of JavaScript online submissions for Remove Duplicates from Sorted List II.
+// Memory Usage: 40.4 MB, less than 45.59% of JavaScript online submissions for Remove Duplicates from Sorted List II.
