@@ -19,14 +19,30 @@
 // Output: [[0,0,0,0],[0,4,5,0],[0,3,1,0]]
 
 var setZeroes = function (matrix) {
-  //create horLocation variable set to a new Array the length of matrix[i]
-  //create vertLocation variable set to a new Array the length of the matrix
-  //iterate through the matrix
-  //if the value in the matrix is equal to 0
-  //set the value of the horLocation[i] to true
-  //set the value of the vertLoaction[j] to true
-  //iterate through the matrix
-  //if the value of horzontal[i] or vertical[j] are true
-  //change the value in the matrix to zero
-  //return the matrix
+  let horLocation = new Array(matrix.length);
+  let vertLocation = new Array(matrix[0].length);
+
+  for (let i = 0; i < matrix.length; i++) {
+    for (let j = 0; j < matrix[i].length; j++) {
+      if (matrix[i][j] === 0) {
+        horLocation[i] = true;
+        vertLocation[j] = true;
+      }
+    }
+  }
+
+  for (let i = 0; i < matrix.length; i++) {
+    for (let j = 0; j < matrix[i].length; j++) {
+      if (horLocation[i] === true || vertLocation[j] === true) {
+        matrix[i][j] = 0;
+      }
+    }
+  }
+
+  return matrix;
 };
+
+// Success
+// Details
+// Runtime: 88 ms, faster than 97.93% of JavaScript online submissions for Set Matrix Zeroes.
+// Memory Usage: 40.2 MB, less than 95.46% of JavaScript online submissions for Set Matrix Zeroes.
