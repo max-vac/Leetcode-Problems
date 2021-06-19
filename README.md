@@ -11,12 +11,14 @@ Daily Solutions to Leetcode Toy Problems
 #15. 3Sum
 #16. 3Sum Closest
 #20. Valid Parentheses
+#21 Merge Two Sorted Lists
 #26. Remove Duplicates from Sorted Array
 #27. Remove Element
 #28. Implement strStr()
 #35. Search Insert Position
 #39. Combination Sum
 #73. Set Matrix Zeroes
+#74. Search a 2D Matrix
 #76. Minimum Window Substring
 #82. Remove Duplicates from Sorted List II
 #83. Remove Duplicates from Sorted List
