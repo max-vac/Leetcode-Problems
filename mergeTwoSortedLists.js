@@ -16,19 +16,28 @@
 // Output: [0]
 
 var mergeTwoLists = function (l1, l2) {
-  //create variable mergedList set to a new NodeList
-  //create head variable set to the mergedList for later use
-  //while there is a l1 and a l2
-  //if l1 val is less than l2 val
-  //set mergedList.next equal to l1
-  //set l1 to the next node in the l1 list
-  //else
-  //set mergedList.next to l2
-  //set l2 to the next node in the l2 list
-  //set mergedList to the next node of the mergedList
-  //if l1 is null
-  //mergedList.next will be the remainder of l2
-  //if l2 is null
-  //mergeList.next will be the remainder of l1
-  //return the variable head.next so that you remove the initial empty node
+  let mergedList = new NodeList();
+  let head = mergedList;
+
+  while (l1 && l2) {
+    if (l1.val < l2.val) {
+      mergedList.next = l1;
+      l1 = l1.next;
+    } else {
+      mergedList.next = l2;
+      l2 = l2.next;
+    }
+
+    mergedList = mergedList.next;
+  }
+
+  if (!l1) mergedList.next = l2;
+  if (!l2) mergedList.next = l1;
+
+  return head.next;
 };
+
+// Success
+// Details
+// Runtime: 76 ms, faster than 99.46% of JavaScript online submissions for Merge Two Sorted Lists.
+// Memory Usage: 40.5 MB, less than 30.82% of JavaScript online submissions for Merge Two Sorted Lists.
