@@ -15,4 +15,21 @@
 // Input: head = [1,2], n = 1
 // Output: [1]
 
-var removeNthFromEnd = function (head, n) {};
+var removeNthFromEnd = function (head, n) {
+  //create currentNode variable set to the head
+  //create listLength variable set to 0;
+  //while there i a currentNode
+  //set currentNode to currentNode.next
+  //increment listLength by 1
+  //create counter variable set to the listLength variable minus n
+  //if counter is equal to 0
+  //return head.next
+  //reset currentNode to head
+  //while counter is greater than 0
+  //if counter is equal to one
+  //set the currentNode.next to currentNode.next.next
+  //else
+  //set currentNode to currentNode.next
+  //decrement counter
+  //return head
+};
