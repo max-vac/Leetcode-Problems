@@ -23,28 +23,47 @@
 // Output: [[1,5]]
 
 var insert = function (intervals, newInterval) {
-  //create variable firstVal set to the first value of the newInterval
-  //create variable secondVal set to the second value of the newInterval
-  //if intervals has no length then return newIntervals in an array
-  //if secondVal is smaller than the first value of the first bucket
-  //unshift the newInterval to the intervals array
-  //return intervals
-  //if the firstVal is greater than the last buckets second value
-  //push the newInterval onto the intervals array
-  //return intervals
-  //create variable index set to 0
-  //create variable length set to the length of the intervals array
-  //create variable results set to an empty array
-  //while the index is less than length and the firstVal is greater than the second value of each bucket
-  //push bucket into the results variable
-  //increment the index val
-  //while the index is less than the length and the secondVal is great than or equal to the first value of each bucket
-  //set the firstVal to the Math.min between the firstVal and the current buckets first value
-  //set the secondVal to the math.max between the secondVal and the current buckets second value
-  //increment the index
-  //push the bucket containing the firstVal and the secondVal into the results array
-  //while the index is less than the length
-  //push the bucket into the results array
-  //increment the index
-  //return the results variable
+  let firstVal = newInterval[0];
+  let secondVal = newInterval[1];
+
+  if (!intervals.length) return [newInterval];
+
+  if (secondVal < intervals[0][0]) {
+    intervals.unshift(newInterval);
+    return intervals;
+  }
+
+  if (firstVal > intervals[intervals.length - 1][1]) {
+    intervals.push(newInterval);
+    return intervals;
+  }
+
+  let index = 0;
+  let length = intervals.length;
+  let results = [];
+
+  while (index < length && firstVal > intervals[index][1]) {
+    results.push(intervals[index]);
+    index++;
+  }
+
+  while (index < length && secondVal >= intervals[index][0]) {
+    firstVal = Math.min(firstVal, intervals[index][0]);
+    secondVal = Math.max(secondVal, intervals[index][1]);
+    index++;
+  }
+
+  results.push([firstVal, secondVal]);
+
+  while (index < length) {
+    results.push(intervals[index]);
+    index++;
+  }
+
+  return results;
 };
+
+// Success
+// Details
+// Runtime: 76 ms, faster than 98.39% of JavaScript online submissions for Insert Interval.
+// Memory Usage: 41.2 MB, less than 43.19% of JavaScript online submissions for Insert Interval.
